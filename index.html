@@ -1,0 +1,98 @@
+
+<html><head>
+<meta http-equiv="Content-Language" content="en-us">
+
+<title>Calculator for Radial Accelerator</title>
+<META NAME="DESCRIPTION" CONTENT="Calculator for Radial Accelerator">
+<META NAME="Keywords" CONTENT="">
+<META NAME="RATING" CONTENT="General">
+<META NAME="ROBOTS" CONTENT="index, follow">
+<META NAME="REVISIT-AFTER" CONTENT="1 Week">
+<meta NAME="resource-type" CONTENT="document">
+
+<script language="JavaScript">
+
+<!--
+
+function solve(form){
+
+L = eval(form.L.value);
+W = eval(form.W.value);
+TW = eval(form.T_W.value);
+TG = eval(form.T_G.value);
+MOD = eval(form.MOD.value);
+
+
+TSIZE = TW + TG;
+Lines = L / TSIZE;
+
+ARCS   = Math.PI*(TG/2)*Lines;
+LENGTH = ((Lines * W) + ARCS) / 1000;
+
+form.S.value = LENGTH * MOD;
+form.SK.value = (LENGTH * MOD ) / 1000;
+
+} 
+function reset(form) {}
+
+// -->
+
+</script>
+
+</head>
+
+<body class=main>
+
+<form name="form">
+  <div align="center">
+  <h1>Radial Accelerator Calculator</h1>
+    <center>
+  <table border="0" width="600" cellspacing="0" cellpadding="0">
+    <tr class=cel>
+    </tr>
+    <tr>
+      <td width="350" class="cel">&nbsp;Length (L)</td>
+      <td width="150" class="cel">
+      <input TYPE="text" NAME="L" SIZE="10" VALUE="10"> mm</td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Width (W)</td>
+      <td class="cel">
+      <input TYPE="text" NAME="W" SIZE="10" VALUE="10"> mm
+      </td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Track Size Width</td>
+      <td class="cel">
+      <input TYPE="text" NAME="T_W" SIZE="10" VALUE="0.001"> mm</td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Track Gap Width</td>
+      <td class="cel">
+      <input TYPE="text" NAME="T_G" SIZE="10" VALUE="0.001"> mm</td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Number of Modules</td>
+      <td class="cel">
+      <input TYPE="text" NAME="MOD" SIZE="10" VALUE="1"></td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Length</td>
+      <td class="cel"><input TYPE="text" NAME="S" SIZE="10">      
+   meters</td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Length</td>
+      <td class="cel"><input TYPE="text" NAME="SK" SIZE="10"> kilometers</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="cel"> &nbsp;<input type="button" value="Solve" onClick="solve(form)"><input type="button" value="Reset" onClick="reset(form)"> </td>
+    </tr>
+  </table>
+
+    </center>
+  </div>
+</form>
+
+</body>
+</html>

@@ -29,6 +29,7 @@ Lines = L / TSIZE;
 ARCS   = Math.PI*(TG/2)*Lines;
 LENGTH = ((Lines * W) + ARCS) / 1000;
 
+form.LMOD.value = (L * MOD) / 1000;
 form.S.value = LENGTH * MOD;
 form.SK.value = (LENGTH * MOD ) / 1000;
 
@@ -77,12 +78,17 @@ function reset(form) {}
       <input TYPE="text" NAME="MOD" SIZE="10" VALUE="1"></td>
     </tr>
     <tr>
-      <td class="cel">&nbsp;Length</td>
+      <td class="cel">&nbsp;Acclerator Module Length</td>
+      <td class="cel">
+      <input TYPE="text" NAME="LMOD" SIZE="10"> meters</td>
+    </tr>
+    <tr>
+      <td class="cel">&nbsp;Total Accelerator Length</td>
       <td class="cel"><input TYPE="text" NAME="S" SIZE="10">      
    meters</td>
     </tr>
     <tr>
-      <td class="cel">&nbsp;Length</td>
+      <td class="cel">&nbsp;Total Accelerator Length</td>
       <td class="cel"><input TYPE="text" NAME="SK" SIZE="10"> kilometers</td>
     </tr>
     <tr>
